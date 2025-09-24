@@ -3,7 +3,7 @@ import { TrendingUp, Target, Calendar, BookOpen, Award, AlertTriangle } from 'lu
 import { LineChart, Line, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip, RadialBarChart, RadialBar, Legend } from 'recharts';
 import { useAuth } from '../../context/AuthContext';
 import { useLanguage } from '../../context/LanguageContext';
-import StudentChatbot from '/Users/manyakalra/Desktop/smart-india-hackathon/src/components/Dashboard/StudentChatbot';
+import StudentChatbot from './StudentChatbot';
 
 const StudentDashboard = () => {
   const { user } = useAuth();
