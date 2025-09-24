@@ -1,0 +1,151 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafbfc;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.hindi-font {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+}
+
+.bengali-font {
+  font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+}
+
+.tamil-font {
+  font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+}
+
+/* Mac-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+  background: rgba(17, 24, 39, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-gray-700 font-medium px-6 py-3 rounded-xl border border-gray-300 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-mac-red-500 to-mac-red-600 hover:from-mac-red-600 hover:to-mac-red-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+.btn-warning {
+  @apply bg-gradient-to-r from-mac-yellow-500 to-mac-yellow-600 hover:from-mac-yellow-600 hover:to-mac-yellow-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+.btn-success {
+  @apply bg-gradient-to-r from-mac-green-500 to-mac-green-600 hover:from-mac-green-600 hover:to-mac-green-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl shadow-mac border border-gray-200 transition-all duration-200 hover:shadow-xl;
+}
+
+.card-dark {
+  @apply bg-gray-800 rounded-xl shadow-mac border border-gray-700 transition-all duration-200 hover:shadow-xl;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white;
+}
+
+.input-field:focus {
+  @apply outline-none ring-2 ring-blue-500 border-transparent;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Status indicators */
+.status-high {
+  @apply bg-mac-red-100 text-mac-red-800 border border-mac-red-200;
+}
+
+.status-medium {
+  @apply bg-mac-yellow-100 text-mac-yellow-800 border border-mac-yellow-200;
+}
+
+.status-low {
+  @apply bg-mac-green-100 text-mac-green-800 border border-mac-green-200;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Custom utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.transition-mac {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
