@@ -232,6 +232,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for Smart India Hackathon 2024**
+**Built with ❤️ for Smart India Hackathon 2025**
 
 *Transforming Indian education through AI-powered dropout prevention*
