@@ -224,14 +224,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Indian education community** for inspiration
 - **Open source libraries** that made this possible
 
-## 📞 Contact & Support
-- **Team Lead**: [Your Name]
-- **Email**: team@aidropout.edu
-- **Demo**: [Live Demo Link]
-- **Presentation**: [Slides Link]
-
----
-
-**Built with ❤️ for Smart India Hackathon 2024**
+**Built by team C.H.A.O.S. Smart India Hackathon 2025**
 
 *Transforming Indian education through AI-powered dropout prevention*
