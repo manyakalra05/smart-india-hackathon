@@ -19,6 +19,11 @@ import StudentDashboard from './components/Dashboard/StudentDashboard';
 import Analytics from './components/Dashboard/Analytics';
 import Predictions from './components/Dashboard/Predictions';
 import Interventions from './components/Dashboard/Interventions';
+import StudentsManagement from './components/Dashboard/StudentsManagement';
+import Reports from './components/Dashboard/Reports';
+import Settings from './components/Dashboard/Settings';
+import StudentProgress from './components/Dashboard/StudentProgress';
+import StudentProfile from './components/Dashboard/StudentProfile';
 
 // CSS
 import './index.css';
@@ -62,19 +67,19 @@ const AppContent = () => {
                 case 'dashboard':
                   return isAdmin ? <AdminDashboard /> : <StudentDashboard />;
                 case 'analytics':
-                  return isAdmin ? <Analytics /> : <div>Not authorized</div>;
+                  return isAdmin ? <Analytics /> : <div className="text-center text-gray-500 mt-20">Not authorized</div>;
                 case 'predictions':
-                  return isAdmin ? <Predictions /> : <div>Not authorized</div>;
+                  return isAdmin ? <Predictions /> : <div className="text-center text-gray-500 mt-20">Not authorized</div>;
                 case 'interventions':
-                  return isAdmin ? <Interventions /> : <div>Not authorized</div>;
+                  return isAdmin ? <Interventions /> : <div className="text-center text-gray-500 mt-20">Not authorized</div>;
                 case 'students':
-                  return isAdmin ? <StudentsManagement /> : <div>Not authorized</div>;
-                case 'progress':
-                  return !isAdmin ? <StudentProgress /> : <div>Not available</div>;
-                case 'profile':
-                  return !isAdmin ? <StudentProfile /> : <div>Not available</div>;
+                  return isAdmin ? <StudentsManagement /> : <div className="text-center text-gray-500 mt-20">Not authorized</div>;
                 case 'reports':
-                  return <Reports />;
+                  return isAdmin ? <Reports /> : <div className="text-center text-gray-500 mt-20">Not authorized</div>;
+                case 'progress':
+                  return !isAdmin ? <StudentProgress /> : <div className="text-center text-gray-500 mt-20">Not available</div>;
+                case 'profile':
+                  return !isAdmin ? <StudentProfile /> : <div className="text-center text-gray-500 mt-20">Not available</div>;
                 case 'settings':
                   return <Settings />;
                 default:
@@ -103,42 +108,6 @@ const AppContent = () => {
       );
   }
 };
-
-// Placeholder components for missing dashboard sections
-const StudentsManagement = () => (
-  <div className="bg-white rounded-lg shadow p-6">
-    <h2 className="text-2xl font-bold mb-4">Students Management</h2>
-    <p>Students management interface will be implemented here.</p>
-  </div>
-);
-
-const StudentProgress = () => (
-  <div className="bg-white rounded-lg shadow p-6">
-    <h2 className="text-2xl font-bold mb-4">My Progress</h2>
-    <p>Student progress tracking interface will be implemented here.</p>
-  </div>
-);
-
-const StudentProfile = () => (
-  <div className="bg-white rounded-lg shadow p-6">
-    <h2 className="text-2xl font-bold mb-4">My Profile</h2>
-    <p>Student profile management interface will be implemented here.</p>
-  </div>
-);
-
-const Reports = () => (
-  <div className="bg-white rounded-lg shadow p-6">
-    <h2 className="text-2xl font-bold mb-4">Reports</h2>
-    <p>Reports and documentation interface will be implemented here.</p>
-  </div>
-);
-
-const Settings = () => (
-  <div className="bg-white rounded-lg shadow p-6">
-    <h2 className="text-2xl font-bold mb-4">Settings</h2>
-    <p>Application settings interface will be implemented here.</p>
-  </div>
-);
 
 // Main App Component
 const App = () => {

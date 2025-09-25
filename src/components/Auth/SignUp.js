@@ -140,7 +140,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                 {t('fullName')}
               </label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <User className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="fullName"
                   name="fullName"
@@ -148,7 +148,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                   required
                   value={formData.fullName}
                   onChange={handleChange}
-                  className={`input-field pl-10 ${errors.fullName ? 'border-red-300 focus:ring-red-500' : ''}`}
+                  className={`w-full px-4 py-2 pl-12 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.fullName ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'}`}
                   placeholder="Enter your full name"
                 />
               </div>
@@ -163,7 +163,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                 {t('email')}
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="email"
                   name="email"
@@ -171,7 +171,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className={`input-field pl-10 ${errors.email ? 'border-red-300 focus:ring-red-500' : ''}`}
+                  className={`w-full px-4 py-2 pl-12 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.email ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'}`}
                   placeholder="Enter your email"
                 />
               </div>
@@ -186,7 +186,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                 {t('phone')}
               </label>
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="phone"
                   name="phone"
@@ -194,7 +194,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`input-field pl-10 ${errors.phone ? 'border-red-300 focus:ring-red-500' : ''}`}
+                  className={`w-full px-4 py-2 pl-12 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.phone ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'}`}
                   placeholder="+91-9876543210"
                 />
               </div>
@@ -209,7 +209,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                 {t('password')}
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="password"
                   name="password"
@@ -217,13 +217,13 @@ const SignUp = ({ onSwitchToLogin }) => {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className={`input-field pl-10 pr-10 ${errors.password ? 'border-red-300 focus:ring-red-500' : ''}`}
+                  className={`w-full px-4 py-2 pl-12 pr-12 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.password ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'}`}
                   placeholder="Create a password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
@@ -239,7 +239,7 @@ const SignUp = ({ onSwitchToLogin }) => {
                 {t('confirmPassword')}
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="confirmPassword"
                   name="confirmPassword"
@@ -247,13 +247,13 @@ const SignUp = ({ onSwitchToLogin }) => {
                   required
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className={`input-field pl-10 pr-10 ${errors.confirmPassword ? 'border-red-300 focus:ring-red-500' : ''}`}
+                  className={`w-full px-4 py-2 pl-12 pr-12 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${errors.confirmPassword ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'}`}
                   placeholder="Confirm your password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
                 >
                   {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>

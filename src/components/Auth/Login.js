@@ -109,7 +109,7 @@ const Login = ({ onSwitchToSignup }) => {
                 {t('email')}
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="email"
                   name="email"
@@ -117,7 +117,7 @@ const Login = ({ onSwitchToSignup }) => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="input-field pl-10"
+                  className="w-full px-4 py-2 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your email"
                 />
               </div>
@@ -129,7 +129,7 @@ const Login = ({ onSwitchToSignup }) => {
                 {t('password')}
               </label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Lock className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
                 <input
                   id="password"
                   name="password"
@@ -137,13 +137,13 @@ const Login = ({ onSwitchToSignup }) => {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className="input-field pl-10 pr-10"
+                  className="w-full px-4 py-2 pl-12 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your password"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
                 >
                   {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                 </button>
